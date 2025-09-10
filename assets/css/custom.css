@@ -565,3 +565,100 @@
     line-height: 1; /* Garante que o ícone está bem alinhado */
     transition: all 0.3s ease;
 }
+
+/* --- Estilos para Dropdowns no Header --- */
+
+.main-nav .nav .has-submenu {
+    position: relative; /* Essencial para o posicionamento do dropdown */
+    list-style: none; /* Remove marcadores de lista */
+    margin: 0 15px; /* Ajusta espaçamento entre itens do menu principal */
+    display: flex; /* Para alinhar o link e a seta do dropdown */
+    align-items: center;
+}
+
+.main-nav .nav .has-submenu > a {
+    color: #3B566E; /* Cor do texto do item principal do dropdown */
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 0px; /* Padding para a área clicável do item principal */
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    z-index: 1; /* Garante que o link está acima do dropdown (quando fechado) */
+}
+
+/* Seta indicadora de dropdown */
+.main-nav .nav .has-submenu > a::after {
+    content: "\f107"; /* Código Unicode para Font Awesome Chevron Down */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* Necessário para ícones solidos */
+    font-size: 0.8em;
+    margin-left: 5px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/* Rotação da seta quando o dropdown está aberto */
+.main-nav .nav .has-submenu.show > a::after {
+    transform: rotate(180deg);
+}
+
+
+/* Estilo para o próprio menu dropdown (o box que aparece) */
+.main-nav .nav .has-submenu .dropdown-menu {
+    display: block; /* Oculto por padrão, mas visível via JS do Bootstrap */
+    position: absolute;
+    top: 100%; /* Aparece abaixo do item principal */
+    left: 0;
+    min-width: 180px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    opacity: 0; /* Começa invisível */
+    visibility: hidden; /* Escondido */
+    transition: all 0.3s ease;
+    z-index: 99; /* Garante que fica por cima de outros elementos */
+    margin-top: 10px; /* Espaçamento entre o item principal e o dropdown */
+}
+
+/* Mostra o dropdown quando a classe 'show' é aplicada pelo Bootstrap JS */
+.main-nav .nav .has-submenu.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+/* Estilo para os itens dentro do dropdown */
+.main-nav .nav .has-submenu .dropdown-menu li {
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav .nav .has-submenu .dropdown-menu .dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    white-space: nowrap; /* Previne que o texto quebre */
+    transition: all 0.3s ease;
+}
+
+.main-nav .nav .has-submenu .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f8f8; /* Cor de fundo no hover */
+    color: #ec4a5d; /* Cor do texto no hover */
+    padding-left: 25px; /* Pequeno efeito de indentação no hover */
+}
+
+/* Ajustes para o botão de contacto se estiver a usar */
+.main-nav .nav .main-red-button {
+    margin-left: 15px; /* Espaçamento para o botão de contacto */
+}
+
+/* REMOVER ESTA REGRA SE ESTIVER A CAUSAR PROBLEMAS NO MENU */
+/* Se a regra ".main-nav .nav li a" do seu template estiver a causar problemas de alinhamento */
+/* ou a anular o nosso CSS, pode ser necessário ajustá-la ou sobrepor. */
+/* Por enquanto, vamos assumir que o CSS acima é suficiente. */
