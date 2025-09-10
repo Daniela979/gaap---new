@@ -191,44 +191,6 @@
 }
 /* --- Estilos para o Conteúdo que está SEMPRE visível (Texto abaixo da Imagem) --- */
 
-.our-portfolio .item .showed-content-with-text {
-    display: flex; /* Usa flexbox */
-    flex-direction: column; /* Organiza itens em coluna */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    height: 100%; /* Garante que ocupa a altura total */
-    position: absolute; /* Permite que o hidden-content se sobreponha */
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px; /* Adicione preenchimento */
-    background-color: #f8f8f8; /* Fundo leve para o showed content */
-    border-radius: 15px; /* Arredonda as bordas */
-}
-
-.our-portfolio .item .showed-content-with-text img {
-    max-width: 100px; /* Tamanho da imagem do ícone */
-    height: auto;
-    margin-bottom: 15px; /* Espaço entre a imagem e o texto */
-}
-
-.donation-always-visible-text {
-    text-align: center; /* Centra o texto */
-}
-
-.donation-always-visible-text h4 {
-    font-size: 1.2em; /* Tamanho da fonte para o título visível */
-    color: #333333; /* Cor escura */
-    margin-bottom: 5px; /* Espaço entre título e parágrafo */
-    font-weight: 600;
-}
-
-.donation-always-visible-text p {
-    font-size: 0.9em;
-    color: #777777; /* Cor mais suave */
-    line-height: 1.4;
-    margin-bottom: 0;
-}
 
 
 /* --- Garantir que o hidden-content se sobrepõe no hover --- */
