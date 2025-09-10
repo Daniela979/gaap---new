@@ -1,0 +1,87 @@
+/* --- Estilos para o Testemunho Card --- */
+.testemunho-card {
+    background-color: #ffffff; /* Fundo branco ou cor clara para o card */
+    padding: 30px; /* Mais preenchimento interno */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais proeminente para destaque */
+    text-align: center; /* Centralizar o texto dentro do card */
+    height: 100%; /* Garante que o card ocupe toda a altura disponível, útil para alinhamento */
+    display: flex; /* Usar flexbox para alinhar o conteúdo verticalmente */
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.testemunho-text {
+    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+    display: flex; /* Para controlar o espaçamento entre título e parágrafo */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* --- Estilo para o Título (Família do Zé) --- */
+.testemunho-titulo {
+    font-size: 2.2em; /* Tamanho maior para o título */
+    color: #ec4a5d; /* Cor principal do seu tema para destaque */
+    font-weight: 700; /* Mais negrito */
+    margin-bottom: 20px; /* Aumenta o espaçamento abaixo do título */
+    text-transform: uppercase; /* Transforma em maiúsculas para mais ênfase */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+/* --- Estilo para o Parágrafo do Testemunho --- */
+.testemunho-paragrafo {
+    font-size: 1.1em; /* Tamanho da fonte ligeiramente maior */
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
+    color: #555555; /* Cor de texto mais suave */
+    margin-top: 15px; /* Espaçamento acima do parágrafo */
+    max-width: 80%; /* Limita a largura do texto para melhor legibilidade em telas grandes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Ajustes para as Imagens do Carrossel (revisão da moldura e tamanho) --- */
+#happyEndingsCarousel .carousel-item .right-image img {
+    max-height: 450px; /* Altura máxima ligeiramente maior para as imagens */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Bordas mais arredondadas, combinando com o card */
+    border: 6px solid #f8d7da; /* Borda mais grossa, cor suave que complemente o vermelho */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidade */
+    transition: all 0.3s ease;
+}
+
+#happyEndingsCarousel .carousel-item .right-image img:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+}
+
+/* --- Estilo para as setas de navegação do Carrossel --- */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ec4a5d; /* Cor das setas igual à cor principal */
+    border-radius: 50%; /* Torna os ícones circulares */
+    padding: 15px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; /* Aumenta a área clicável das setas */
+    opacity: 0.8; /* Torna as setas ligeiramente menos transparentes */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1; /* Totalmente visíveis ao passar o mouse */
+}
+
+/* Ajustes para telas menores (responsividade) */
+@media (max-width: 991px) {
+    .testemunho-card {
+        margin-bottom: 30px; /* Espaçamento entre o card e a imagem em telas pequenas */
+    }
+    .testemunho-titulo {
+        font-size: 1.8em;
+    }
+    .testemunho-paragrafo {
+        font-size: 1em;
+    }
+}
