@@ -651,6 +651,43 @@
 .dropdown-item {
   padding-left: 1rem; /* Adjust this value if needed for spacing, but make sure it's consistent for all items */
 }
+
+/* Garante que o contentor da imagem serve como ponto de referência */
+.left-image {
+  position: relative;
+}
+
+/* Posiciona o contentor do texto sobre a imagem */
+.left-image .info {
+  position: absolute; /* MUITO IMPORTANTE: Posiciona o elemento sobre a imagem */
+  bottom: 0;          /* Alinha-o ao fundo do seu contentor pai */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px; /* Adiciona algum preenchimento para que o conteúdo não toque nas bordas */
+  display: flex; /* Para controlar o alinhamento interno */
+  flex-direction: column;
+  justify-content: flex-end; /* Alinha o conteúdo ao fundo do contentor */
+  color: white; /* Garante que o texto é visível */
+  z-index: 2; /* Coloca o conteúdo por cima da imagem */
+}
+
+/* Remove a altura fixa ou desnecessária que pode estar a causar o problema */
+.left-image .info .inner-content {
+  height: auto;
+}
+
+/* Garante que o fundo vermelho está por trás de tudo */
+.left-image .info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 69, 58, 0.85); /* Vermelho translúcido, ajuste a cor e a opacidade se precisar */
+  z-index: 1; /* Coloca o fundo atrás do conteúdo, mas por cima da imagem */
+}
 /* REMOVER ESTA REGRA SE ESTIVER A CAUSAR PROBLEMAS NO MENU */
 /* Se a regra ".main-nav .nav li a" do seu template estiver a causar problemas de alinhamento */
 /* ou a anular o nosso CSS, pode ser necessário ajustá-la ou sobrepor. */
