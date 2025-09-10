@@ -139,19 +139,20 @@
     }
 }
 
-.main-red-button a {
-    /* Cor de fundo padrão do seu tema */
-    /* background-color: #ec4a5d; */ 
-    
-    /* Exemplo de cor alternativa: */
+#portfolio .main-red-button a {
+    /* Exemplo: se quiser uma cor diferente para este botão */
     /* background-color: #A8E6CF; */ /* Um verde suave */
     /* color: #333; */ /* Cor do texto para o botão verde */
-    /* padding: 12px 25px; */ /* Ajustar o padding se quiser um botão maior/menor */
+    
+    padding: 15px 35px; /* Ajusta o tamanho do botão */
+    font-size: 1.1em; /* Tamanho da fonte */
+    font-weight: 700; /* Mais negrito */
+    border-radius: 30px; /* Mais arredondado */
 }
 
-/* E no hover: */
-.main-red-button a:hover {
-    /* background-color: #FFD3B5; */ /* Uma cor diferente no hover */
+#portfolio .main-red-button a:hover {
+    /* Exemplo de cor de hover para o botão verde */
+    /* background-color: #92DDC6; */
 }
 /* --- Estilos para o Autor do Testemunho (Foto e Nome) --- */
 .autor-testemunho {
