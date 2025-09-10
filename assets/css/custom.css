@@ -355,3 +355,52 @@
 
 /* --- (Mantenha o CSS para o .item, .showed-content e .hidden-content que lhe dei anteriormente para o layout vertical dentro de cada card e o hover effect) --- */
 /* Certifique-se que o CSS que define o layout interno do card está presente e correto. */
+/* --- ESTILO CORRIGIDO PARA AS COLUNAS DA SECÇÃO DE DOAÇÕES --- */
+
+/* Para ecrãs grandes (col-lg-3) */
+@media (min-width: 992px) {
+    #portfolio .row > .col-lg-3 {
+        flex: 0 0 auto !important;
+        width: 25% !important;
+        max-width: 25% !important;
+        /* Mantém o padding padrão do Bootstrap para o espaçamento entre colunas */
+        padding-left: var(--bs-gutter-x, 1.5rem) !important;
+        padding-right: var(--bs-gutter-x, 1.5rem) !important;
+    }
+}
+
+/* Para ecrãs médios (col-sm-6) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    #portfolio .row > .col-sm-6 {
+        flex: 0 0 auto !important;
+        width: 50% !important;
+        max-width: 50% !important;
+        padding-left: var(--bs-gutter-x, 1.5rem) !important;
+        padding-right: var(--bs-gutter-x, 1.5rem) !important;
+    }
+}
+
+/* Para ecrãs pequenos (col-sm-6 ou col-12, dependendo da necessidade) */
+@media (max-width: 575.98px) {
+    #portfolio .row > .col-sm-6 { /* Se usar col-sm-6 aqui, assume 100% */
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: var(--bs-gutter-x, 1.5rem) !important;
+        padding-right: var(--bs-gutter-x, 1.5rem) !important;
+    }
+}
+
+/* Ajustes para garantir que o link e o item se encaixam na coluna */
+#portfolio .col-lg-3 > a,
+#portfolio .col-sm-6 > a {
+    display: block !important;
+    height: 100% !important;
+}
+
+#portfolio .item {
+    width: 100% !important; /* O item interno preenche a largura da sua coluna */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 30px; /* Adiciona uma margem inferior para separar os itens na vertical */
+}
