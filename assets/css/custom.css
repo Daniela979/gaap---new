@@ -404,3 +404,56 @@
     margin-right: 0 !important;
     margin-bottom: 30px; /* Adiciona uma margem inferior para separar os itens na vertical */
 }
+/* --- Estilo para a Chamada à Ação "Quero Ajudar e Fazer Parte" (Opção 1: Ícone e Texto) --- */
+
+.call-to-action-icon {
+    display: flex; /* Para centrar o conteúdo dentro */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ocupa a largura total da coluna */
+    margin-top: 50px; /* Margem superior para separar do conteúdo acima */
+    margin-bottom: 50px; /* Margem inferior para separar do conteúdo abaixo */
+}
+
+.call-to-action-icon a {
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    color: #ec4a5d; /* Cor principal do seu tema para o texto e ícone */
+    display: flex; /* Para alinhar o ícone e o parágrafo */
+    flex-direction: row; /* Coloca o ícone e o texto lado a lado */
+    align-items: center; /* Alinha verticalmente no centro */
+    padding: 15px 30px; /* Um padding suave para a área clicável */
+    border: 2px solid #ec4a5d; /* Borda da cor do tema para um visual de "cartão" leve */
+    border-radius: 30px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Fundo branco para contrastar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra suave para destacar */
+    transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+.call-to-action-icon a i {
+    font-size: 2.2em; /* Tamanho do ícone, ajuste conforme necessário */
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+    line-height: 1; /* Garante que o ícone está bem alinhado */
+    transition: all 0.3s ease; /* Transição para o efeito de hover do ícone */
+}
+
+.call-to-action-icon a p {
+    font-size: 1.4em; /* Tamanho do texto */
+    font-weight: 700; /* Mais negrito */
+    line-height: 1.2;
+    margin-bottom: 0; /* Remove a margem inferior padrão do parágrafo */
+    transition: all 0.3s ease; /* Transição para o efeito de hover do texto */
+}
+
+/* Efeitos de HOVER para a área clicável */
+.call-to-action-icon a:hover {
+    background-color: #ec4a5d; /* Fundo do link fica vermelho no hover */
+    color: white; /* Cor do texto e ícone fica branca no hover */
+    border-color: #ff001c; /* Borda ligeiramente mais escura no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais proeminente */
+    transform: translateY(-2px); /* Eleva ligeiramente o elemento */
+}
+
+.call-to-action-icon a:hover i,
+.call-to-action-icon a:hover p {
+    color: white; /* Garante que o ícone e o texto ficam brancos no hover */
+}
