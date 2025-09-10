@@ -303,3 +303,54 @@
     align-self: flex-start; /* Alinha o botão à esquerda dentro do flex container */
     /* Se quiser o botão mesmo no topo, pode ser necessário remover margin-bottom dos parágrafos ou títulos acima. */
 }
+/* --- Garante que as colunas se alinham horizontalmente na secção de doações --- */
+
+/* Para ecrãs grandes (col-lg-3) */
+@media (min-width: 992px) { /* Aplica-se a partir de 992px de largura */
+    #portfolio .row > .col-lg-3 {
+        flex: 0 0 auto !important; /* Reseta flexbox para o comportamento de coluna */
+        width: 25% !important; /* Cada coluna ocupa 25% da largura (4 por linha) */
+        max-width: 25% !important; /* Garante que não excede 25% */
+        padding-left: var(--bs-gutter-x, 1.5rem) !important; /* Mantém o padding padrão do Bootstrap */
+        padding-right: var(--bs-gutter-x, 1.5rem) !important; /* Mantém o padding padrão do Bootstrap */
+    }
+}
+
+/* Para ecrãs médios (col-sm-6) */
+@media (min-width: 576px) and (max-width: 991.98px) { /* Entre 576px e 991.98px */
+    #portfolio .row > .col-sm-6 {
+        flex: 0 0 auto !important;
+        width: 50% !important; /* Cada coluna ocupa 50% da largura (2 por linha) */
+        max-width: 50% !important;
+        padding-left: var(--bs-gutter-x, 1.5rem) !important;
+        padding-right: var(--bs-gutter-x, 1.5rem) !important;
+    }
+}
+
+/* Para ecrãs pequenos (se não usar col-12, col-sm-6 ainda se aplica) */
+@media (max-width: 575.98px) { /* Abaixo de 576px */
+    #portfolio .row > .col-sm-6 { /* Se não tiver col-12, o col-sm-6 assume */
+        flex: 0 0 auto !important;
+        width: 100% !important; /* Cada coluna ocupa 100% da largura (1 por linha) */
+        max-width: 100% !important;
+        padding-left: var(--bs-gutter-x, 1.5rem) !important;
+        padding-right: var(--bs-gutter-x, 1.5rem) !important;
+    }
+}
+
+/* Garante que o link e o item interno não anulam o comportamento da coluna */
+#portfolio .col-lg-3 > a,
+#portfolio .col-sm-6 > a {
+    display: block !important; /* O link deve ser um bloco para ocupar o espaço da coluna */
+    height: 100% !important; /* Garante que o link é clicável em toda a área */
+}
+
+#portfolio .item {
+    width: 100% !important; /* O item preenche 100% da largura da sua coluna */
+    /* Remova quaisquer margens horizontais que possam estar a empurrar os itens */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* --- (Mantenha o CSS para o .item, .showed-content e .hidden-content que lhe dei anteriormente para o layout vertical dentro de cada card e o hover effect) --- */
+/* Certifique-se que o CSS que define o layout interno do card está presente e correto. */
