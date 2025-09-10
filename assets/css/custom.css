@@ -568,12 +568,10 @@
 
 /* --- Estilos para Dropdowns no Header --- */
 
-.main-nav .nav .has-submenu {
-    position: relative; /* Essencial para o posicionamento do dropdown */
-    list-style: none; /* Remove marcadores de lista */
-    margin: 0 15px; /* Ajusta espaçamento entre itens do menu principal */
-    display: flex; /* Para alinhar o link e a seta do dropdown */
-    align-items: center;
+.main-nav .nav .has-submenu .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Garante que não tem marcadores de lista */
 }
 
 .main-nav .nav .has-submenu > a {
@@ -603,50 +601,29 @@
     transform: rotate(180deg);
 }
 
-
-/* Estilo para o próprio menu dropdown (o box que aparece) */
+/* Anular qualquer margem no elemento do menu dropdown */
 .main-nav .nav .has-submenu .dropdown-menu {
-    display: block; /* Oculto por padrão, mas visível via JS do Bootstrap */
-    position: absolute;
-    top: 100%; /* Aparece abaixo do item principal */
-    left: 0;
-    min-width: 180px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 10px 0;
-    opacity: 0; /* Começa invisível */
-    visibility: hidden; /* Escondido */
-    transition: all 0.3s ease;
-    z-index: 99; /* Garante que fica por cima de outros elementos */
-    margin-top: 10px; /* Espaçamento entre o item principal e o dropdown */
-}
-
-/* Mostra o dropdown quando a classe 'show' é aplicada pelo Bootstrap JS */
-.main-nav .nav .has-submenu.show .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    margin-top: 0;
-}
-
-/* Estilo para os itens dentro do dropdown */
-.main-nav .nav .has-submenu .dropdown-menu li {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style: none; /* Garante que não tem marcadores de lista */
 }
 
+/* Garante que os itens individuais do dropdown não têm margem nem preenchimento extra */
+.main-nav .nav .has-submenu .dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define o preenchimento para os links, que deve ser consistente */
 .main-nav .nav .has-submenu .dropdown-menu .dropdown-item {
-    display: block;
-    padding: 10px 20px;
-    color: #555555;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: capitalize;
-    white-space: nowrap; /* Previne que o texto quebre */
-    transition: all 0.3s ease;
+    /* Pode usar um valor de padding-left para dar um pouco de espaço, se quiser */
+    padding: 10px 20px; /* Mantém o padding original que já tinha */
 }
 
+/* Remover o efeito de indentação no hover se não o quiser */
+.main-nav .nav .has-submenu .dropdown-menu .dropdown-item:hover {
+    padding-left: 20px; /* Mantenha o mesmo valor do normal para evitar o "salto" */
+}
 .main-nav .nav .has-submenu .dropdown-menu .dropdown-item:hover {
     background-color: #f8f8f8; /* Cor de fundo no hover */
     color: #ec4a5d; /* Cor do texto no hover */
