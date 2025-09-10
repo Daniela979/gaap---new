@@ -86,3 +86,18 @@
         font-size: 1em;
     }
 }
+
+.main-red-button a {
+    /* Cor de fundo padrão do seu tema */
+    /* background-color: #ec4a5d; */ 
+    
+    /* Exemplo de cor alternativa: */
+    /* background-color: #A8E6CF; */ /* Um verde suave */
+    /* color: #333; */ /* Cor do texto para o botão verde */
+    /* padding: 12px 25px; */ /* Ajustar o padding se quiser um botão maior/menor */
+}
+
+/* E no hover: */
+.main-red-button a:hover {
+    /* background-color: #FFD3B5; */ /* Uma cor diferente no hover */
+}
