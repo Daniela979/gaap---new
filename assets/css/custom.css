@@ -658,9 +658,20 @@
     margin-left: 15px; /* Espaçamento para o botão de contacto */
 }
 .dropdown-menu {
-    padding: 0;
-    margin: 0;
-    list-style: none; /* This is key to removing the bullet points and indentation */
+  /* This removes the bullet points and default list indentation */
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  /* This ensures there is no extra padding or margin on the list items */
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-item {
+  /* You may also need to adjust the padding on the links themselves */
+  padding-left: 1rem;
 }
 
 /* REMOVER ESTA REGRA SE ESTIVER A CAUSAR PROBLEMAS NO MENU */
