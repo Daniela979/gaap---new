@@ -110,8 +110,8 @@
 }
 
 .foto-autor {
-    width: 80px;  /* Largura: 80 pixels */
-    height: 80px; /* Altura: 80 pixels (para ser um quadrado perfeito antes de arredondar) */
+    width: 40px;  /* Largura: 80 pixels */
+    height: 40px; /* Altura: 80 pixels (para ser um quadrado perfeito antes de arredondar) */
     border-radius: 50%; /* Torna a imagem perfeitamente redonda */
     object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção, cortando se necessário */
     border: 3px solid #f8d7da; /* Pequena borda para destacar a foto */
@@ -124,4 +124,42 @@
     font-weight: 600;
     color: #333333;
     margin-bottom: 0;
+}
+
+/* --- Estilo para as setas de navegação do Carrossel (Font Awesome) --- */
+.carousel-control-prev .fas,
+.carousel-control-next .fas {
+    font-size: 2.2em; /* Tamanho maior para as setas */
+    color: #ec4a5d; /* Cor das setas (ex: a sua cor principal vermelha) */
+    /* Ou uma cor mais suave: */
+    /* color: #555555; */ /* Cinzento escuro */
+    /* color: #A8E6CF; */ /* Um verde suave */
+    
+    background-color: transparent; /* Remove o fundo */
+    border-radius: 50%; /* Mantém o formato circular invisível */
+    padding: 10px; /* Um pouco de padding para espaçamento */
+    transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+.carousel-control-prev .fas:hover,
+.carousel-control-next .fas:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Um pequeno fundo ao passar o mouse */
+    color: #333333; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.1); /* Faz a seta crescer ligeiramente */
+}
+
+/* Ajustes para os botões do carrossel (que contêm os ícones) */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%; /* Aumenta a área clicável se necessário */
+    opacity: 0.9; /* Um pouco mais visível por padrão */
+    top: 50%; /* Alinha verticalmente */
+    transform: translateY(-50%); /* Ajuste fino */
+    background: none; /* Remove qualquer fundo padrão que o Bootstrap possa aplicar ao botão */
+    border: none; /* Remove qualquer borda padrão */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
 }
