@@ -59,18 +59,19 @@
 /* --- Estilo para as setas de navegação do Carrossel --- */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #ec4a5d; /* Cor das setas igual à cor principal */
-    border-radius: 50%; /* Torna os ícones circulares */
+    background-color: #ffffff; /* Fundo branco */
+    border: 2px solid #555555; /* Borda cinza escura */
+    border-radius: 50%;
     padding: 15px;
 }
 
 .carousel-control-prev, .carousel-control-next {
-    width: 5%; /* Aumenta a área clicável das setas */
-    opacity: 0.8; /* Torna as setas ligeiramente menos transparentes */
+    width: 5%; 
+    opacity: 0.7; /* Ligeiramente mais transparente do que 0.8 */
 }
 
 .carousel-control-prev:hover, .carousel-control-next:hover {
-    opacity: 1; /* Totalmente visíveis ao passar o mouse */
+    opacity: 1; 
 }
 
 /* Ajustes para telas menores (responsividade) */
