@@ -39,6 +39,108 @@
     margin-left: auto;
     margin-right: auto;
 }
+/* --- Estilos para o Testemunho Card (o contentor branco) --- */
+.testemunho-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%; /* Garante que o card ocupa a altura da coluna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra o conteúdo verticalmente dentro do card */
+    align-items: center; /* Centra o conteúdo horizontalmente */
+}
+
+/* --- Estilos para o Autor do Testemunho (Foto e Nome) --- */
+.autor-testemunho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px; /* Espaço entre o autor e o título do testemunho */
+}
+
+.foto-autor {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preenche o círculo sem distorção */
+    border: 3px solid #f8d7da; /* Borda suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Espaço entre a foto e o nome */
+}
+
+.nome-autor {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 0;
+}
+
+/* --- Estilo para o Título (Família do Zé) e Parágrafo --- */
+.testemunho-text {
+    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testemunho-titulo {
+    font-size: 2.2em;
+    color: #ec4a5d;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testemunho-paragrafo {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555555;
+    margin-top: 15px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Ajustes para a Imagem do Testemunho (no lado direito) --- */
+.right-image {
+    display: flex; /* Para centrar a imagem se ela não ocupar 100% da coluna */
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Garante que o contentor da imagem ocupa a altura da coluna */
+}
+
+.right-image img {
+    max-height: 450px; /* Altura máxima para a imagem */
+    width: 100%; /* Ocupa a largura total do seu contentor */
+    object-fit: cover; /* Garante que a imagem preenche o espaço sem distorcer */
+    border-radius: 15px;
+    border: 6px solid #f8d7da;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.right-image img:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+}
+
+/* --- Ajustes de responsividade para telas menores --- */
+@media (max-width: 991px) { /* Em telas pequenas, o card e a imagem podem se empilhar */
+    .testemunho-card {
+        margin-bottom: 30px; /* Adiciona espaço abaixo do card quando ele está acima da imagem */
+    }
+    .testemunho-titulo {
+        font-size: 1.8em;
+    }
+    .testemunho-paragrafo {
+        font-size: 1em;
+    }
+}
 
 /* --- Ajustes para as Imagens do Carrossel (revisão da moldura e tamanho) --- */
 #happyEndingsCarousel .carousel-item .right-image img {
