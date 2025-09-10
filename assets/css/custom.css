@@ -657,6 +657,11 @@
 .main-nav .nav .main-red-button {
     margin-left: 15px; /* Espaçamento para o botão de contacto */
 }
+.dropdown-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none; /* This is key to removing the bullet points and indentation */
+}
 
 /* REMOVER ESTA REGRA SE ESTIVER A CAUSAR PROBLEMAS NO MENU */
 /* Se a regra ".main-nav .nav li a" do seu template estiver a causar problemas de alinhamento */
