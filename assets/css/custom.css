@@ -558,3 +558,10 @@
 .call-to-action-icon a:hover p {
     color: white !important; /* Força o texto e o ícone a ficarem brancos no hover */
 }
+.call-to-action-icon a i {
+    font-size: 2.2em !important; /* <--- ALtere este valor */
+    margin-right: 15px !important;
+    color: #ec4a5d !important;
+    line-height: 1; /* Garante que o ícone está bem alinhado */
+    transition: all 0.3s ease;
+}
