@@ -657,23 +657,23 @@
 .main-nav .nav .main-red-button {
     margin-left: 15px; /* Espaçamento para o botão de contacto */
 }
+/* This targets the main dropdown menu list */
 .dropdown-menu {
-  /* This removes the bullet points and default list indentation */
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; /* Removes the bullet points */
+  padding: 0;           /* Removes default padding from the list */
+  margin: 0;            /* Removes default margin from the list */
 }
 
+/* This targets the individual list items within the dropdown */
 .dropdown-menu li {
-  /* This ensures there is no extra padding or margin on the list items */
-  padding: 0;
-  margin: 0;
+  padding: 0; /* Ensures no padding on the list items themselves */
+  margin: 0;  /* Ensures no margin on the list items themselves */
 }
 
+/* This targets the links inside the dropdown items */
 .dropdown-item {
-  /* You may also need to adjust the padding on the links themselves */
-  padding-left: 1rem;
+  padding-left: 1rem; /* Adjust this value if needed for spacing, but make sure it's consistent for all items */
 }
-
 /* REMOVER ESTA REGRA SE ESTIVER A CAUSAR PROBLEMAS NO MENU */
 /* Se a regra ".main-nav .nav li a" do seu template estiver a causar problemas de alinhamento */
 /* ou a anular o nosso CSS, pode ser necessário ajustá-la ou sobrepor. */
