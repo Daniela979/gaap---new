@@ -720,6 +720,37 @@
   z-index: 1; /* Posição abaixo do texto (z-index: 2), mas acima da imagem (z-index padrão: 0) */
   border-radius: 15px; /* Para as bordas arredondadas do fundo */
 }
+/* Posicionamento para o contentor que irá ficar por cima da imagem */
+#blog .left-image .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Criar o fundo vermelho translúcido SÓ para esta secção */
+#blog .left-image .info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(236, 74, 93, 0.85); /* Fundo vermelho translúcido */
+  z-index: 1; /* Por trás do texto, à frente da imagem */
+  border-radius: 15px;
+}
+
+/* Opcional: Garante que o texto dentro deste contentor fica branco */
+#blog .left-image .info * {
+  color: white !important;
+}
 /* REMOVER ESTA REGRA SE ESTIVER A CAUSAR PROBLEMAS NO MENU */
 /* Se a regra ".main-nav .nav li a" do seu template estiver a causar problemas de alinhamento */
 /* ou a anular o nosso CSS, pode ser necessário ajustá-la ou sobrepor. */
