@@ -688,6 +688,38 @@
   background-color: rgba(255, 69, 58, 0.85); /* Vermelho translúcido, ajuste a cor e a opacidade se precisar */
   z-index: 1; /* Coloca o fundo atrás do conteúdo, mas por cima da imagem */
 }
+
+/* 1. O contentor da imagem torna-se o ponto de referência */
+.left-image {
+  position: relative;
+}
+
+/* 2. O contentor de texto é posicionado por cima da imagem */
+.left-image .info {
+  position: absolute;
+  bottom: 0;       /* Alinha ao fundo do contentor pai */
+  left: 0;
+  width: 100%;     /* Ocupa a largura total */
+  height: 100%;    /* Ocupa a altura total */
+  z-index: 2;      /* Garante que o texto fica por cima da imagem */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alinha o texto ao fundo */
+  padding: 30px;
+}
+
+/* 3. Criar o fundo vermelho translúcido que fica atrás do texto, mas à frente da imagem */
+.left-image .info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(236, 74, 93, 0.85); /* Seu vermelho com 85% de opacidade */
+  z-index: 1; /* Posição abaixo do texto (z-index: 2), mas acima da imagem (z-index padrão: 0) */
+  border-radius: 15px; /* Para as bordas arredondadas do fundo */
+}
 /* REMOVER ESTA REGRA SE ESTIVER A CAUSAR PROBLEMAS NO MENU */
 /* Se a regra ".main-nav .nav li a" do seu template estiver a causar problemas de alinhamento */
 /* ou a anular o nosso CSS, pode ser necessário ajustá-la ou sobrepor. */
