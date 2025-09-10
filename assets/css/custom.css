@@ -290,3 +290,25 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
 }
+/* Adicione este código ao seu assets/css/custom.css (ou no final do seu CSS principal) */
+
+#blog .left-image .info .inner-content {
+    display: flex; /* Transforma o contentor em um flex container */
+    flex-direction: column; /* Organiza os itens em coluna */
+    /* Remove justify-content ou align-items se já existirem e estiverem a interferir */
+    /* Para mover o botão para cima, vamos garantir que ele está alinhado ao fim */
+    justify-content: flex-end; /* Empurra o conteúdo para baixo */
+    align-items: flex-start; /* Alinha à esquerda */
+    height: 100%; /* Garante que o inner-content ocupa toda a altura */
+    position: relative; /* Necessário para posicionamento absoluto se for usado */
+}
+
+#blog .left-image .info .inner-content ul {
+    margin-bottom: auto; /* Empurra o resto do conteúdo para baixo */
+}
+
+#blog .left-image .info .main-blue-button {
+    margin-top: 15px; /* Adiciona uma margem positiva para afastar-se do texto acima */
+    align-self: flex-start; /* Alinha o botão à esquerda dentro do flex container */
+    /* Se quiser o botão mesmo no topo, pode ser necessário remover margin-bottom dos parágrafos ou títulos acima. */
+}
