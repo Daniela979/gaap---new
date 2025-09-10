@@ -56,22 +56,45 @@
     transform: translateY(-3px);
 }
 
-/* --- Estilo para as setas de navegação do Carrossel --- */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #ffffff; /* Fundo branco */
-    border: 2px solid #555555; /* Borda cinza escura */
-    border-radius: 50%;
-    padding: 15px;
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%; /* Largura da área clicável */
+    opacity: 0.8; /* Um pouco transparente por padrão */
+    top: 50%; /* Alinha verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralizar */
+    background: none; /* MUITO IMPORTANTE: Garante que não há fundo nos próprios botões */
+    border: none; /* Remove qualquer borda dos botões */
+    text-shadow: none; /* Remove text-shadow que alguns browsers podem adicionar aos ícones */
+    outline: none; /* Remove o contorno ao clicar */
 }
 
-.carousel-control-prev, .carousel-control-next {
-    width: 5%; 
-    opacity: 0.7; /* Ligeiramente mais transparente do que 0.8 */
+/* Estilo para os ÍCONES de seta Font Awesome */
+.carousel-control-prev .fas,
+.carousel-control-next .fas {
+    font-size: 2.5em; /* Tamanho maior para as setas */
+    color: #ec4a5d; /* Cor principal do seu tema (vermelho) */
+    /* Ou pode escolher outra cor se preferir: */
+    /* color: #333333; */ /* Cinzento escuro */
+    /* color: #6C757D; */ /* Cinzento Bootstrap */
+
+    /* Remove qualquer fundo, borda ou arredondamento dos ÍCONES */
+    background-color: transparent !important; /* Força a transparência */
+    border: none !important; /* Remove qualquer borda */
+    border-radius: 0 !important; /* Remove qualquer arredondamento */
+    padding: 0; /* Remove qualquer padding que possa estar a criar o efeito de bolinha */
+    transition: all 0.2s ease-in-out; /* Suaviza a transição de hover */
 }
 
-.carousel-control-prev:hover, .carousel-control-next:hover {
-    opacity: 1; 
+/* Efeito ao passar o mouse nas setas */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Totalmente visível ao passar o mouse */
+}
+
+.carousel-control-prev .fas:hover,
+.carousel-control-next .fas:hover {
+    color: #ff001c; /* Cor mais vibrante ao passar o mouse */
+    transform: scale(1.1); /* Faz a seta crescer ligeiramente */
 }
 
 /* Ajustes para telas menores (responsividade) */
@@ -126,40 +149,43 @@
     margin-bottom: 0;
 }
 
-/* --- Estilo para as setas de navegação do Carrossel (Font Awesome) --- */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%; /* Largura da área clicável */
+    opacity: 0.8; /* Um pouco transparente por padrão */
+    top: 50%; /* Alinha verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralizar */
+    background: none; /* MUITO IMPORTANTE: Garante que não há fundo nos próprios botões */
+    border: none; /* Remove qualquer borda dos botões */
+    text-shadow: none; /* Remove text-shadow que alguns browsers podem adicionar aos ícones */
+    outline: none; /* Remove o contorno ao clicar */
+}
+
+/* Estilo para os ÍCONES de seta Font Awesome */
 .carousel-control-prev .fas,
 .carousel-control-next .fas {
-    font-size: 2.2em; /* Tamanho maior para as setas */
-    color: #ec4a5d; /* Cor das setas (ex: a sua cor principal vermelha) */
-    /* Ou uma cor mais suave: */
-    /* color: #555555; */ /* Cinzento escuro */
-    /* color: #A8E6CF; */ /* Um verde suave */
-    
-    background-color: transparent; /* Remove o fundo */
-    border-radius: 50%; /* Mantém o formato circular invisível */
-    padding: 10px; /* Um pouco de padding para espaçamento */
-    transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+    font-size: 2.5em; /* Tamanho maior para as setas */
+    color: #ec4a5d; /* Cor principal do seu tema (vermelho) */
+    /* Ou pode escolher outra cor se preferir: */
+    /* color: #333333; */ /* Cinzento escuro */
+    /* color: #6C757D; */ /* Cinzento Bootstrap */
+
+    /* Remove qualquer fundo, borda ou arredondamento dos ÍCONES */
+    background-color: transparent !important; /* Força a transparência */
+    border: none !important; /* Remove qualquer borda */
+    border-radius: 0 !important; /* Remove qualquer arredondamento */
+    padding: 0; /* Remove qualquer padding que possa estar a criar o efeito de bolinha */
+    transition: all 0.2s ease-in-out; /* Suaviza a transição de hover */
+}
+
+/* Efeito ao passar o mouse nas setas */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Totalmente visível ao passar o mouse */
 }
 
 .carousel-control-prev .fas:hover,
 .carousel-control-next .fas:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Um pequeno fundo ao passar o mouse */
-    color: #333333; /* Cor mais escura ao passar o mouse */
+    color: #ff001c; /* Cor mais vibrante ao passar o mouse */
     transform: scale(1.1); /* Faz a seta crescer ligeiramente */
-}
-
-/* Ajustes para os botões do carrossel (que contêm os ícones) */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 6%; /* Aumenta a área clicável se necessário */
-    opacity: 0.9; /* Um pouco mais visível por padrão */
-    top: 50%; /* Alinha verticalmente */
-    transform: translateY(-50%); /* Ajuste fino */
-    background: none; /* Remove qualquer fundo padrão que o Bootstrap possa aplicar ao botão */
-    border: none; /* Remove qualquer borda padrão */
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    opacity: 1;
 }
