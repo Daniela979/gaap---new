@@ -56,47 +56,76 @@
     transform: translateY(-3px);
 }
 
+/* --- ESTILO PARA AS SETAS DE NAVEGAÇÃO DO CARROSSEL (FINAIS FELIZES) --- */
+
+/* Estilo para os próprios botões (contentor do ícone) */
 .carousel-control-prev,
 .carousel-control-next {
-    width: 6%; /* Largura da área clicável */
-    opacity: 0.8; /* Um pouco transparente por padrão */
-    top: 50%; /* Alinha verticalmente */
+    position: absolute; /* Permite posicionamento exato */
+    top: 50%; /* Centraliza verticalmente */
     transform: translateY(-50%); /* Ajuste fino para centralizar */
-    background: none; /* MUITO IMPORTANTE: Garante que não há fundo nos próprios botões */
-    border: none; /* Remove qualquer borda dos botões */
-    text-shadow: none; /* Remove text-shadow que alguns browsers podem adicionar aos ícones */
-    outline: none; /* Remove o contorno ao clicar */
+    width: 40px; /* Largura mínima para ser clicável */
+    height: 40px; /* Altura mínima para ser clicável */
+    opacity: 1; /* Totalmente visível por padrão */
+    background-color: transparent !important; /* MUITO IMPORTANTE: Remove qualquer fundo */
+    border: none !important; /* Remove qualquer borda */
+    box-shadow: none !important; /* Remove qualquer sombra */
+    outline: none !important; /* Remove contorno ao focar/clicar */
+    padding: 0; /* Remove qualquer preenchimento dos botões */
+    text-shadow: none; /* Remove qualquer sombra de texto dos ícones */
+    transition: all 0.2s ease-in-out; /* Transição suave */
+    display: flex; /* Permite alinhar o ícone dentro */
+    align-items: center; /* Centra o ícone verticalmente */
+    justify-content: center; /* Centra o ícone horizontalmente */
 }
 
-/* Estilo para os ÍCONES de seta Font Awesome */
+/* Posição específica para cada botão */
+.carousel-control-prev {
+    left: -60px; /* Move o botão da esquerda para fora do carrossel */
+    /* Ajuste este valor se quiser que a seta esteja mais dentro ou mais fora */
+}
+
+.carousel-control-next {
+    right: -60px; /* Move o botão da direita para fora do carrossel */
+    /* Ajuste este valor se quiser que a seta esteja mais dentro ou mais fora */
+}
+
+/* Estilo para o ÍCONE de seta Font Awesome (o fas fa-chevron-left/right) */
 .carousel-control-prev .fas,
 .carousel-control-next .fas {
     font-size: 2.5em; /* Tamanho maior para as setas */
-    color: #ec4a5d; /* Cor principal do seu tema (vermelho) */
-    /* Ou pode escolher outra cor se preferir: */
-    /* color: #333333; */ /* Cinzento escuro */
-    /* color: #6C757D; */ /* Cinzento Bootstrap */
+    color: #007bff; /* Cor azul desejada */
+    /* Pode usar a sua cor principal se preferir: #ec4a5d */
+    /* Ou uma cor mais escura: #333333 */
 
-    /* Remove qualquer fundo, borda ou arredondamento dos ÍCONES */
-    background-color: transparent !important; /* Força a transparência */
-    border: none !important; /* Remove qualquer borda */
-    border-radius: 0 !important; /* Remove qualquer arredondamento */
-    padding: 0; /* Remove qualquer padding que possa estar a criar o efeito de bolinha */
-    transition: all 0.2s ease-in-out; /* Suaviza a transição de hover */
+    background-color: transparent !important; /* Garante que o ícone não tem fundo */
+    border: none !important; /* Garante que o ícone não tem borda */
+    border-radius: 0 !important; /* Garante que o ícone não tem arredondamento */
+    padding: 0 !important; /* Garante que o ícone não tem preenchimento */
+    margin: 0 !important; /* Garante que o ícone não tem margem */
+    transition: all 0.2s ease-in-out; /* Transição suave para o hover */
 }
 
 /* Efeito ao passar o mouse nas setas */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    opacity: 1; /* Totalmente visível ao passar o mouse */
-}
-
-.carousel-control-prev .fas:hover,
-.carousel-control-next .fas:hover {
-    color: #ff001c; /* Cor mais vibrante ao passar o mouse */
+.carousel-control-prev:hover .fas,
+.carousel-control-next:hover .fas {
+    color: #0056b3; /* Cor azul mais escura ao passar o mouse */
     transform: scale(1.1); /* Faz a seta crescer ligeiramente */
 }
 
+/* Pode ser necessário ajustar o padding do próprio carrossel ou da secção */
+/* para dar espaço às setas fora do conteúdo */
+#services .container {
+    padding-left: 80px; /* Exemplo: Adiciona padding para as setas da esquerda */
+    padding-right: 80px; /* Exemplo: Adiciona padding para as setas da direita */
+    position: relative; /* Essencial para as setas posicionarem-se em relação ao container */
+}
+
+/* Se o carrossel em si tiver um fundo, pode precisar de ajustar o z-index */
+#happyEndingsCarousel {
+    position: relative;
+    z-index: 1;
+}
 /* Ajustes para telas menores (responsividade) */
 @media (max-width: 991px) {
     .testemunho-card {
