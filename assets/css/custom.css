@@ -110,8 +110,8 @@
 }
 
 .foto-autor {
-    width: 40px;  /* Largura: 80 pixels */
-    height: 40px; /* Altura: 80 pixels (para ser um quadrado perfeito antes de arredondar) */
+    width: 80px;  /* Largura: 80 pixels */
+    height: 80px; /* Altura: 80 pixels (para ser um quadrado perfeito antes de arredondar) */
     border-radius: 50%; /* Torna a imagem perfeitamente redonda */
     object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção, cortando se necessário */
     border: 3px solid #f8d7da; /* Pequena borda para destacar a foto */
