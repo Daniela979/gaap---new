@@ -826,3 +826,9 @@
   height: 50%; /* metade do card para a imagem */
   object-fit: cover;
 }
+
+.our-blog .left-image .info {
+    background: transparent !important;
+    color: #000; /* ajusta a cor do texto se necessário */
+}
+
