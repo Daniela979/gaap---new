@@ -853,3 +853,81 @@
     background: transparent !important;
 }
 
+/* Correções para a imagem do Teo e o seu contentor de informação */
+#blog .left-image {
+    position: relative; /* Essencial para posicionar o .info por cima */
+    height: 100%; /* Garante que ocupa a altura total da coluna */
+    overflow: hidden; /* Esconde qualquer parte da imagem ou info que vaze */
+    border-radius: 15px; /* Bordas arredondadas para o bloco */
+}
+
+#blog .left-image img {
+    width: 100%; /* Ocupa a largura total do seu contentor */
+    height: 100%; /* Ocupa a altura total do seu contentor */
+    object-fit: cover; /* Recorta a imagem para preencher sem distorcer, mas pode cortar partes */
+    border-radius: 15px; /* Bordas arredondadas para a imagem */
+}
+
+#blog .left-image .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ocupa a altura total do left-image */
+    padding: 30px; /* Espaçamento interno para o conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o conteúdo ao fundo */
+    z-index: 2; /* Fica acima da imagem e do fundo vermelho */
+    box-sizing: border-box; /* Inclui o padding na altura/largura */
+    color: white; /* Cor do texto padrão para este bloco */
+}
+
+/* Fundo vermelho translúcido para o bloco de informação da imagem do Teo */
+#blog .left-image .info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(236, 74, 93, 0.85); /* Seu vermelho com 85% de opacidade */
+    z-index: 1; /* Fica abaixo do conteúdo (.info), mas acima da imagem */
+    border-radius: 15px; /* Bordas arredondadas para o fundo */
+}
+
+/* Garante que o conteúdo dentro do .info (lista, botão) tem cor branca e z-index */
+#blog .left-image .info ul,
+#blog .left-image .info ul li,
+#blog .left-image .info ul li i,
+#blog .left-image .info .main-blue-button a {
+    color: white !important; /* Força o texto a ser branco */
+    position: relative; /* Necessário para z-index */
+    z-index: 3; /* Fica acima do fundo vermelho */
+}
+
+#blog .left-image .info .main-blue-button a {
+    border: 1px solid white !important; /* Borda branca para o botão */
+    background-color: transparent !important;
+}
+
+#blog .left-image .info .main-blue-button a:hover {
+    background-color: white !important;
+    color: #ec4a5d !important; /* Texto vermelho no hover */
+}
+
+/* Ajustes para o grupo "Setembro 2025 TemplateMo Solidariedade" que está a aparecer no topo */
+/* Este parece ser o .info dentro do HEADER principal, não o da secção #blog */
+/* Vamos anular qualquer estilo que o esteja a tornar vermelho e a puxá-lo para baixo */
+.main-banner .left-content .info { /* ou um seletor mais específico se houver um .info no header */
+    background-color: transparent !important; /* Garante que não tem fundo */
+    position: static !important; /* Restaura o posicionamento normal */
+    height: auto !important; /* Remove altura forçada */
+    padding: 0 !important; /* Remove padding */
+    color: inherit !important; /* Volta à cor normal */
+}
+
+/* Se por acaso o .info dentro do main-banner tiver um ::before, também o removemos */
+.main-banner .left-content .info::before {
+    display: none !important;
+}
