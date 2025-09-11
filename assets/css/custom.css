@@ -771,3 +771,10 @@
   padding: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+.left-image .info {
+  background: transparent !important;
+  position: absolute; /* se quiseres que fique em overlay */
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
