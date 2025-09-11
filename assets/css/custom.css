@@ -193,3 +193,53 @@
 /* ================================ */
 /* --- SEÇÃO NOTÍCIAS (BLOG) --- */
 /* ================================ */
+#happyEndingsCarousel {
+    position: relative; /* FUNDAMENTAL para que as setas se posicionem em relação a ele */
+}
+
+/* Esconder o container para as setas se for o caso */
+#services .container {
+    position: relative;
+    /* Se tiver padding aqui, pode ser removido se as setas ficarem dentro do carousel */
+    /* padding-left: 80px; */
+    /* padding-right: 80px; */
+}
+
+/* Estilo para os próprios botões (a área clicável) */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute; /* Essencial para posicionamento */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralizar */
+    width: 50px;
+    height: 50px;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important; /* Garante que está sempre visível */
+    z-index: 10;
+}
+
+/* Posição específica para cada botão */
+.carousel-control-prev {
+    left: 20px; /* Ajuste a distância da esquerda, se precisar */
+}
+
+.carousel-control-next {
+    right: 20px; /* Ajuste a distância da direita, se precisar */
+}
+
+/* Estilo para o ÍCONE de seta Font Awesome */
+.carousel-control-prev .fas,
+.carousel-control-next .fas {
+    font-size: 2.5em;
+    color: #ec4a5d;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o mouse nas setas */
+.carousel-control-prev:hover .fas,
+.carousel-control-next:hover .fas {
+    color: #ff001c;
+    transform: scale(1.1);
+}
