@@ -831,4 +831,25 @@
     background: transparent !important;
     color: #000; /* ajusta a cor do texto se necessário */
 }
+/* Garante que a imagem do Teo mantém a altura dos cards à direita */
+#blog .row > .col-lg-6:first-child .left-image img {
+    height: 100%;       /* ocupa toda a altura do container */
+    object-fit: cover;  /* mantém proporção sem distorcer */
+}
+
+/* O container da esquerda deve ter a mesma altura da direita */
+#blog .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#blog .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Remove qualquer overlay de fundo */
+#blog .left-image .info {
+    background: transparent !important;
+}
 
