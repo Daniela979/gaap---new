@@ -260,3 +260,93 @@
     position: relative; /* Garante que está no fluxo normal */
     z-index: 1; /* Valor baixo para não se sobrepor a outros elementos, se for o caso */
 }
+/* ================================ */
+/* --- SEÇÃO NOTÍCIAS (BLOG) --- */
+/* ================================ */
+
+#blog {
+    /* Garante que a secção tem padding para não colar em cima da anterior/posterior */
+    padding: 80px 0;
+}
+
+/* O container deve ter flexbox para alinhar as colunas */
+#blog .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#blog .row.align-items-stretch {
+    /* Remove regras de altura fixa que possam causar problemas */
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#blog .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para o card do Teo */
+#blog .left-image {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    /* Adiciona um espaço para separar os blocos verticais */
+    margin-bottom: 30px; 
+}
+
+#blog .left-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#blog .left-image .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+#blog .left-image .info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(236, 74, 93, 0.85);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+#blog .left-image .info *,
+#blog .left-image .info a {
+    color: white !important;
+    position: relative;
+    z-index: 3;
+}
+
+/* Estilos para os outros cards */
+#blog .card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: calc(100% / 3 - 10px);
+    margin-bottom: 10px;
+}
+
+#blog .card img {
+    height: 50%;
+    object-fit: cover;
+}
