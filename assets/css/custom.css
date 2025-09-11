@@ -1,74 +1,37 @@
-/* --- Estilos para o Testemunho Card --- */
-.testemunho-card {
-    background-color: #ffffff; /* Fundo branco ou cor clara para o card */
-    padding: 30px; /* Mais preenchimento interno */
-    border-radius: 15px; /* Bordas mais arredondadas */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais proeminente para destaque */
-    text-align: center; /* Centralizar o texto dentro do card */
-    height: 100%; /* Garante que o card ocupe toda a altura disponível, útil para alinhamento */
-    display: flex; /* Usar flexbox para alinhar o conteúdo verticalmente */
-    flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-}
+/* ===================================== */
+/* --- SEÇÃO TESTEMUNHOS E FINAIS FELIZES --- */
+/* ===================================== */
 
-.testemunho-text {
-    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
-    display: flex; /* Para controlar o espaçamento entre título e parágrafo */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Centraliza horizontalmente */
-}
-
-/* --- Estilo para o Título (Família do Zé) --- */
-.testemunho-titulo {
-    font-size: 2.2em; /* Tamanho maior para o título */
-    color: #ec4a5d; /* Cor principal do seu tema para destaque */
-    font-weight: 700; /* Mais negrito */
-    margin-bottom: 20px; /* Aumenta o espaçamento abaixo do título */
-    text-transform: uppercase; /* Transforma em maiúsculas para mais ênfase */
-    letter-spacing: 1px; /* Espaçamento entre letras */
-}
-
-/* --- Estilo para o Parágrafo do Testemunho --- */
-.testemunho-paragrafo {
-    font-size: 1.1em; /* Tamanho da fonte ligeiramente maior */
-    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
-    color: #555555; /* Cor de texto mais suave */
-    margin-top: 15px; /* Espaçamento acima do parágrafo */
-    max-width: 80%; /* Limita a largura do texto para melhor legibilidade em telas grandes */
-    margin-left: auto;
-    margin-right: auto;
-}
-/* --- Estilos para o Testemunho Card (o contentor branco) --- */
+/* Estilos para o Card do Testemunho (contentor branco) */
 .testemunho-card {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 100%; /* Garante que o card ocupa a altura da coluna */
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra o conteúdo verticalmente dentro do card */
-    align-items: center; /* Centra o conteúdo horizontalmente */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* --- Estilos para o Autor do Testemunho (Foto e Nome) --- */
+/* Estilos para o Autor (Foto e Nome) */
 .autor-testemunho {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25px; /* Espaço entre o autor e o título do testemunho */
+    margin-bottom: 25px;
 }
 
 .foto-autor {
     width: 80px;
     height: 80px;
-    border-radius: 50%; /* Torna a imagem redonda */
-    object-fit: cover; /* Garante que a imagem preenche o círculo sem distorção */
-    border: 3px solid #f8d7da; /* Borda suave */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f8d7da;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px; /* Espaço entre a foto e o nome */
+    margin-bottom: 10px;
 }
 
 .nome-autor {
@@ -78,15 +41,7 @@
     margin-bottom: 0;
 }
 
-/* --- Estilo para o Título (Família do Zé) e Parágrafo --- */
-.testemunho-text {
-    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Estilos para o Texto do Testemunho */
 .testemunho-titulo {
     font-size: 2.2em;
     color: #ec4a5d;
@@ -106,50 +61,21 @@
     margin-right: auto;
 }
 
-/* --- Ajustes para a Imagem do Testemunho (no lado direito) --- */
-.right-image {
-    display: flex; /* Para centrar a imagem se ela não ocupar 100% da coluna */
+/* Ajustes para a Imagem do Carrossel */
+#happyEndingsCarousel .carousel-item .right-image {
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Garante que o contentor da imagem ocupa a altura da coluna */
 }
 
-.right-image img {
-    max-height: 450px; /* Altura máxima para a imagem */
-    width: 100%; /* Ocupa a largura total do seu contentor */
-    object-fit: cover; /* Garante que a imagem preenche o espaço sem distorcer */
+#happyEndingsCarousel .carousel-item .right-image img {
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
     border-radius: 15px;
     border: 6px solid #f8d7da;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.right-image img:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    transform: translateY(-3px);
-}
-
-/* --- Ajustes de responsividade para telas menores --- */
-@media (max-width: 991px) { /* Em telas pequenas, o card e a imagem podem se empilhar */
-    .testemunho-card {
-        margin-bottom: 30px; /* Adiciona espaço abaixo do card quando ele está acima da imagem */
-    }
-    .testemunho-titulo {
-        font-size: 1.8em;
-    }
-    .testemunho-paragrafo {
-        font-size: 1em;
-    }
-}
-
-/* --- Ajustes para as Imagens do Carrossel (revisão da moldura e tamanho) --- */
-#happyEndingsCarousel .carousel-item .right-image img {
-    max-height: 450px; /* Altura máxima ligeiramente maior para as imagens */
-    width: 100%;
-    object-fit: cover;
-    border-radius: 15px; /* Bordas mais arredondadas, combinando com o card */
-    border: 6px solid #f8d7da; /* Borda mais grossa, cor suave que complemente o vermelho */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidade */
     transition: all 0.3s ease;
 }
 
@@ -158,689 +84,52 @@
     transform: translateY(-3px);
 }
 
-/* --- ESTILO PARA AS SETAS DE NAVEGAÇÃO DO CARROSSEL (FINAIS FELIZES) --- */
-
-/* Estilo para os próprios botões (contentor do ícone) */
-/* --- ESTILO PARA OS BOTÕES DE NAVEGAÇÃO DO CARROSSEL --- */
-
-/* Estilo para os próprios botões (a área clicável) */
-.carousel-control-prev,
-.carousel-control-next {
-    position: absolute; /* Essencial para posicionamento */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para centralizar */
-    width: 50px; /* Aumenta a largura da área clicável */
-    height: 50px; /* Aumenta a altura da área clicável */
-    opacity: 1; /* Garante que o botão está sempre visível */
-    background-color: #007bff; /* Cor de fundo azul para os botões */
-    border-radius: 50%; /* Torna os botões circulares */
-    border: none; /* Remove qualquer borda */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar */
-    transition: all 0.3s ease; /* Transição suave para hover */
-    display: flex; /* Para centrar o ícone dentro */
-    align-items: center; /* Centra o ícone verticalmente */
-    justify-content: center; /* Centra o ícone horizontalmente */
-    z-index: 10; /* Garante que os botões ficam acima do conteúdo do carrossel */
-    text-shadow: none; /* Remove qualquer text-shadow indesejado */
-}
-
-/* Posição específica para cada botão */
-.carousel-control-prev {
-    left: -70px; /* Posição à esquerda, ajuste conforme necessário */
-}
-
-.carousel-control-next {
-    right: -70px; /* Posição à direita, ajuste conforme necessário */
-}
-
-/* Efeito ao passar o mouse nos botões */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: #0056b3; /* Cor azul mais escura no hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra maior no hover */
-    transform: translateY(-50%) scale(1.05); /* Pequeno efeito de escala */
-}
-
-/* Estilo para o ÍCONE de seta Font Awesome dentro dos botões */
-.carousel-control-prev .fas,
-.carousel-control-next .fas {
-    font-size: 1.5em; /* Tamanho da seta, ajuste se quiser maior */
-    color: #ffffff; /* Cor branca para a seta, para contraste com o azul */
-    background-color: transparent !important; /* Garante que o ícone não tem fundo */
-    border: none !important; /* Garante que o ícone não tem borda */
-    padding: 0 !important; /* Remove qualquer padding extra do ícone */
-    margin: 0 !important; /* Remove qualquer margem extra do ícone */
-    transition: none; /* Não precisamos de transição para o ícone em si, o botão já faz isso */
-}
-
-/* Ajuste do container para dar espaço aos botões posicionados fora */
+/* --- ESTILOS PARA AS SETAS DO CARROSSEL --- */
 #services .container {
-    position: relative; /* Essencial para que os botões se posicionem em relação a este container */
-    padding-left: 80px; /* Espaço para o botão esquerdo */
-    padding-right: 80px; /* Espaço para o botão direito */
-    /* Mantenha o padding-top e padding-bottom se já tiver */
-}
-
-/* Se por acaso o carrossel ainda
-
-/* Se o carrossel em si tiver um fundo, pode precisar de ajustar o z-index */
-#happyEndingsCarousel {
     position: relative;
-    z-index: 1;
-}
-/* Ajustes para telas menores (responsividade) */
-@media (max-width: 991px) {
-    .testemunho-card {
-        margin-bottom: 30px; /* Espaçamento entre o card e a imagem em telas pequenas */
-    }
-    .testemunho-titulo {
-        font-size: 1.8em;
-    }
-    .testemunho-paragrafo {
-        font-size: 1em;
-    }
-}
-
-#portfolio .main-red-button a {
-    /* Exemplo: se quiser uma cor diferente para este botão */
-    /* background-color: #A8E6CF; */ /* Um verde suave */
-    /* color: #333; */ /* Cor do texto para o botão verde */
-    
-    padding: 15px 35px; /* Ajusta o tamanho do botão */
-    font-size: 1.1em; /* Tamanho da fonte */
-    font-weight: 700; /* Mais negrito */
-    border-radius: 30px; /* Mais arredondado */
-}
-
-#portfolio .main-red-button a:hover {
-    /* Exemplo de cor de hover para o botão verde */
-    /* background-color: #92DDC6; */
-}
-/* --- Estilos para o Autor do Testemunho (Foto e Nome) --- */
-.autor-testemunho {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-.foto-autor {
-    width: 80px;  /* Largura: 80 pixels */
-    height: 80px; /* Altura: 80 pixels (para ser um quadrado perfeito antes de arredondar) */
-    border-radius: 50%; /* Torna a imagem perfeitamente redonda */
-    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção, cortando se necessário */
-    border: 3px solid #f8d7da; /* Pequena borda para destacar a foto */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 10px; /* Espaço entre a foto e o nome */
-}
-
-.nome-autor {
-    font-size: 1.2em;
-    font-weight: 600;
-    color: #333333;
-    margin-bottom: 0;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 6%; /* Largura da área clicável */
-    opacity: 0.8; /* Um pouco transparente por padrão */
-    top: 50%; /* Alinha verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para centralizar */
-    background: none; /* MUITO IMPORTANTE: Garante que não há fundo nos próprios botões */
-    border: none; /* Remove qualquer borda dos botões */
-    text-shadow: none; /* Remove text-shadow que alguns browsers podem adicionar aos ícones */
-    outline: none; /* Remove o contorno ao clicar */
+    width: 50px;
+    height: 50px;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
 }
 
-/* Estilo para os ÍCONES de seta Font Awesome */
+.carousel-control-prev {
+    left: -70px;
+}
+
+.carousel-control-next {
+    right: -70px;
+}
+
 .carousel-control-prev .fas,
 .carousel-control-next .fas {
-    font-size: 2.5em; /* Tamanho maior para as setas */
-    color: #ec4a5d; /* Cor principal do seu tema (vermelho) */
-    /* Ou pode escolher outra cor se preferir: */
-    /* color: #333333; */ /* Cinzento escuro */
-    /* color: #6C757D; */ /* Cinzento Bootstrap */
-
-    /* Remove qualquer fundo, borda ou arredondamento dos ÍCONES */
-    background-color: transparent !important; /* Força a transparência */
-    border: none !important; /* Remove qualquer borda */
-    border-radius: 0 !important; /* Remove qualquer arredondamento */
-    padding: 0; /* Remove qualquer padding que possa estar a criar o efeito de bolinha */
-    transition: all 0.2s ease-in-out; /* Suaviza a transição de hover */
+    font-size: 2.5em;
+    color: #ec4a5d;
+    transition: all 0.2s ease-in-out;
 }
 
-/* Efeito ao passar o mouse nas setas */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    opacity: 1; /* Totalmente visível ao passar o mouse */
+.carousel-control-prev:hover .fas,
+.carousel-control-next:hover .fas {
+    color: #ff001c;
+    transform: scale(1.1);
 }
 
-.carousel-control-prev .fas:hover,
-.carousel-control-next .fas:hover {
-    color: #ff001c; /* Cor mais vibrante ao passar o mouse */
-    transform: scale(1.1); /* Faz a seta crescer ligeiramente */
-}
-/* --- Estilos para o Conteúdo que está SEMPRE visível (Texto abaixo da Imagem) --- */
+/* ================================ */
+/* --- SEÇÃO NOTÍCIAS (BLOG) --- */
+/* ================================ */
 
-
-
-/* --- Garantir que o hidden-content se sobrepõe no hover --- */
-
-.our-portfolio .item .hidden-content {
-    display: flex; /* Para que o conteúdo interno possa ser flex */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute; /* MUITO IMPORTANTE: para se sobrepor ao showed-content */
-    top: 0;
-    left: 0;
-    width: 100%;
+/* Garante que o container de notícias tem a mesma altura */
+#blog .row.align-items-stretch {
     height: 100%;
-    background-color: rgba(236, 74, 93, 0.95); /* Fundo vermelho semi-transparente para o hover */
-    color: white; /* Cor do texto no hover */
-    padding: 20px;
-    border-radius: 15px;
-    opacity: 0; /* Começa escondido */
-    visibility: hidden; /* Esconde completamente até o hover */
-    transition: all 0.3s ease-in-out;
-}
-
-.our-portfolio .item:hover .hidden-content {
-    opacity: 1; /* Mostra no hover */
-    visibility: visible; /* Torna visível no hover */
-}
-
-.our-portfolio .item .hidden-content h4 {
-    font-size: 1.5em; /* Tamanho do título no hover */
-    margin-bottom: 10px;
-    color: white; /* Garante que o texto é branco */
-}
-
-.our-portfolio .item .hidden-content p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: white; /* Garante que o texto é branco */
-}
-
-
-/* --- Ajustes no item principal --- */
-.our-portfolio .item {
-    position: relative; /* Essencial para o posicionamento absoluto dos conteúdos internos */
-    overflow: hidden; /* Esconde qualquer conteúdo que possa vazar */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 250px; /* Altura fixa para todos os cards */
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    padding: 0; /* Remove padding extra do .item se houver */
-}
-
-.our-portfolio .item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-}
-/* Adicione este código ao seu assets/css/custom.css (ou no final do seu CSS principal) */
-
-#blog .left-image .info .inner-content {
-    display: flex; /* Transforma o contentor em um flex container */
-    flex-direction: column; /* Organiza os itens em coluna */
-    /* Remove justify-content ou align-items se já existirem e estiverem a interferir */
-    /* Para mover o botão para cima, vamos garantir que ele está alinhado ao fim */
-    justify-content: flex-end; /* Empurra o conteúdo para baixo */
-    align-items: flex-start; /* Alinha à esquerda */
-    height: 100%; /* Garante que o inner-content ocupa toda a altura */
-    position: relative; /* Necessário para posicionamento absoluto se for usado */
-}
-
-#blog .left-image .info .inner-content ul {
-    margin-bottom: auto; /* Empurra o resto do conteúdo para baixo */
-}
-
-#blog .left-image .info .main-blue-button {
-    margin-top: 15px; /* Adiciona uma margem positiva para afastar-se do texto acima */
-    align-self: flex-start; /* Alinha o botão à esquerda dentro do flex container */
-    /* Se quiser o botão mesmo no topo, pode ser necessário remover margin-bottom dos parágrafos ou títulos acima. */
-}
-/* --- Garante que as colunas se alinham horizontalmente na secção de doações --- */
-
-/* Para ecrãs grandes (col-lg-3) */
-@media (min-width: 992px) { /* Aplica-se a partir de 992px de largura */
-    #portfolio .row > .col-lg-3 {
-        flex: 0 0 auto !important; /* Reseta flexbox para o comportamento de coluna */
-        width: 25% !important; /* Cada coluna ocupa 25% da largura (4 por linha) */
-        max-width: 25% !important; /* Garante que não excede 25% */
-        padding-left: var(--bs-gutter-x, 1.5rem) !important; /* Mantém o padding padrão do Bootstrap */
-        padding-right: var(--bs-gutter-x, 1.5rem) !important; /* Mantém o padding padrão do Bootstrap */
-    }
-}
-
-/* Para ecrãs médios (col-sm-6) */
-@media (min-width: 576px) and (max-width: 991.98px) { /* Entre 576px e 991.98px */
-    #portfolio .row > .col-sm-6 {
-        flex: 0 0 auto !important;
-        width: 50% !important; /* Cada coluna ocupa 50% da largura (2 por linha) */
-        max-width: 50% !important;
-        padding-left: var(--bs-gutter-x, 1.5rem) !important;
-        padding-right: var(--bs-gutter-x, 1.5rem) !important;
-    }
-}
-
-/* Para ecrãs pequenos (se não usar col-12, col-sm-6 ainda se aplica) */
-@media (max-width: 575.98px) { /* Abaixo de 576px */
-    #portfolio .row > .col-sm-6 { /* Se não tiver col-12, o col-sm-6 assume */
-        flex: 0 0 auto !important;
-        width: 100% !important; /* Cada coluna ocupa 100% da largura (1 por linha) */
-        max-width: 100% !important;
-        padding-left: var(--bs-gutter-x, 1.5rem) !important;
-        padding-right: var(--bs-gutter-x, 1.5rem) !important;
-    }
-}
-
-/* Garante que o link e o item interno não anulam o comportamento da coluna */
-#portfolio .col-lg-3 > a,
-#portfolio .col-sm-6 > a {
-    display: block !important; /* O link deve ser um bloco para ocupar o espaço da coluna */
-    height: 100% !important; /* Garante que o link é clicável em toda a área */
-}
-
-#portfolio .item {
-    width: 100% !important; /* O item preenche 100% da largura da sua coluna */
-    /* Remova quaisquer margens horizontais que possam estar a empurrar os itens */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-/* --- (Mantenha o CSS para o .item, .showed-content e .hidden-content que lhe dei anteriormente para o layout vertical dentro de cada card e o hover effect) --- */
-/* Certifique-se que o CSS que define o layout interno do card está presente e correto. */
-/* --- ESTILO CORRIGIDO PARA AS COLUNAS DA SECÇÃO DE DOAÇÕES --- */
-
-/* Para ecrãs grandes (col-lg-3) */
-@media (min-width: 992px) {
-    #portfolio .row > .col-lg-3 {
-        flex: 0 0 auto !important;
-        width: 25% !important;
-        max-width: 25% !important;
-        /* Mantém o padding padrão do Bootstrap para o espaçamento entre colunas */
-        padding-left: var(--bs-gutter-x, 1.5rem) !important;
-        padding-right: var(--bs-gutter-x, 1.5rem) !important;
-    }
-}
-
-/* Para ecrãs médios (col-sm-6) */
-@media (min-width: 576px) and (max-width: 991.98px) {
-    #portfolio .row > .col-sm-6 {
-        flex: 0 0 auto !important;
-        width: 50% !important;
-        max-width: 50% !important;
-        padding-left: var(--bs-gutter-x, 1.5rem) !important;
-        padding-right: var(--bs-gutter-x, 1.5rem) !important;
-    }
-}
-
-/* Para ecrãs pequenos (col-sm-6 ou col-12, dependendo da necessidade) */
-@media (max-width: 575.98px) {
-    #portfolio .row > .col-sm-6 { /* Se usar col-sm-6 aqui, assume 100% */
-        flex: 0 0 auto !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: var(--bs-gutter-x, 1.5rem) !important;
-        padding-right: var(--bs-gutter-x, 1.5rem) !important;
-    }
-}
-
-/* Ajustes para garantir que o link e o item se encaixam na coluna */
-#portfolio .col-lg-3 > a,
-#portfolio .col-sm-6 > a {
-    display: block !important;
-    height: 100% !important;
-}
-
-#portfolio .item {
-    width: 100% !important; /* O item interno preenche a largura da sua coluna */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: 30px; /* Adiciona uma margem inferior para separar os itens na vertical */
-}
-/* --- Estilo para a Chamada à Ação "Quero Ajudar e Fazer Parte" (Opção 1: Ícone e Texto) --- */
-
-/* --- ESTILO CORRIGIDO PARA A CHAMADA À AÇÃO (Ícone e Texto) --- */
-
-.call-to-action-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.call-to-action-icon a {
-    text-decoration: none;
-    color: #ec4a5d !important; /* Força a cor do texto e ícone */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 35px !important; /* Força o preenchimento */
-    border: 2px solid #ec4a5d !important; /* FORÇA A BORDA */
-    border-radius: 30px !important; /* Força o arredondamento */
-    background-color: #ffffff !important; /* Força a cor de fundo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-}
-
-.call-to-action-icon a i {
-    font-size: 2.2em !important; /* Força o tamanho do ícone */
-    margin-right: 15px !important; /* Força a margem do ícone */
-    color: #ec4a5d !important; /* Força a cor do ícone */
-}
-
-.call-to-action-icon a p {
-    font-size: 1.4em !important; /* Força o tamanho do texto */
-    font-weight: 700 !important;
-    margin-bottom: 0 !important;
-}
-
-/* Efeitos de HOVER para a área clicável */
-.call-to-action-icon a:hover {
-    background-color: #ec4a5d !important;
-    border-color: #ff001c !important;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
-    transform: translateY(-2px);
-}
-
-.call-to-action-icon a:hover i,
-.call-to-action-icon a:hover p {
-    color: white !important; /* Força o texto e o ícone a ficarem brancos no hover */
-}
-.call-to-action-icon a i {
-    font-size: 2.2em !important; /* <--- ALtere este valor */
-    margin-right: 15px !important;
-    color: #ec4a5d !important;
-    line-height: 1; /* Garante que o ícone está bem alinhado */
-    transition: all 0.3s ease;
-}
-
-/* --- Estilos para Dropdowns no Header --- */
-
-.main-nav .nav .has-submenu .dropdown-menu {
-    margin: 0;
-    padding: 0;
-    list-style: none; /* Garante que não tem marcadores de lista */
-}
-
-.main-nav .nav .has-submenu > a {
-    color: #3B566E; /* Cor do texto do item principal do dropdown */
-    font-size: 15px;
-    font-weight: 400;
-    padding: 10px 0px; /* Padding para a área clicável do item principal */
-    text-transform: capitalize;
-    transition: all 0.3s ease 0s;
-    position: relative;
-    z-index: 1; /* Garante que o link está acima do dropdown (quando fechado) */
-}
-
-/* Seta indicadora de dropdown */
-.main-nav .nav .has-submenu > a::after {
-    content: "\f107"; /* Código Unicode para Font Awesome Chevron Down */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* Necessário para ícones solidos */
-    font-size: 0.8em;
-    margin-left: 5px;
-    vertical-align: middle;
-    transition: transform 0.3s ease;
-}
-
-/* Rotação da seta quando o dropdown está aberto */
-.main-nav .nav .has-submenu.show > a::after {
-    transform: rotate(180deg);
-}
-
-/* Anular qualquer margem no elemento do menu dropdown */
-.main-nav .nav .has-submenu .dropdown-menu {
-    margin: 0;
-    padding: 0;
-    list-style: none; /* Garante que não tem marcadores de lista */
-}
-
-/* Garante que os itens individuais do dropdown não têm margem nem preenchimento extra */
-.main-nav .nav .has-submenu .dropdown-menu li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Define o preenchimento para os links, que deve ser consistente */
-.main-nav .nav .has-submenu .dropdown-menu .dropdown-item {
-    /* Pode usar um valor de padding-left para dar um pouco de espaço, se quiser */
-    padding: 10px 20px; /* Mantém o padding original que já tinha */
-}
-
-/* Remover o efeito de indentação no hover se não o quiser */
-.main-nav .nav .has-submenu .dropdown-menu .dropdown-item:hover {
-    padding-left: 20px; /* Mantenha o mesmo valor do normal para evitar o "salto" */
-}
-.main-nav .nav .has-submenu .dropdown-menu .dropdown-item:hover {
-    background-color: #f8f8f8; /* Cor de fundo no hover */
-    color: #ec4a5d; /* Cor do texto no hover */
-    padding-left: 25px; /* Pequeno efeito de indentação no hover */
-}
-
-/* Ajustes para o botão de contacto se estiver a usar */
-.main-nav .nav .main-red-button {
-    margin-left: 15px; /* Espaçamento para o botão de contacto */
-}
-/* This targets the main dropdown menu list */
-.dropdown-menu {
-  list-style-type: none; /* Removes the bullet points */
-  padding: 0;           /* Removes default padding from the list */
-  margin: 0;            /* Removes default margin from the list */
-}
-
-/* This targets the individual list items within the dropdown */
-.dropdown-menu li {
-  padding: 0; /* Ensures no padding on the list items themselves */
-  margin: 0;  /* Ensures no margin on the list items themselves */
-}
-
-/* This targets the links inside the dropdown items */
-.dropdown-item {
-  padding-left: 1rem; /* Adjust this value if needed for spacing, but make sure it's consistent for all items */
-}
-
-/* Garante que o contentor da imagem serve como ponto de referência */
-.left-image {
-  height: 100%; /* ocupa altura da coluna */
-}
-.left-image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Posiciona o contentor do texto sobre a imagem */
-.left-image .info {
-  position: absolute; /* MUITO IMPORTANTE: Posiciona o elemento sobre a imagem */
-  bottom: 0;          /* Alinha-o ao fundo do seu contentor pai */
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 30px; /* Adiciona algum preenchimento para que o conteúdo não toque nas bordas */
-  display: flex; /* Para controlar o alinhamento interno */
-  flex-direction: column;
-  justify-content: flex-end; /* Alinha o conteúdo ao fundo do contentor */
-  color: white; /* Garante que o texto é visível */
-  z-index: 2; /* Coloca o conteúdo por cima da imagem */
-}
-
-/* Remove a altura fixa ou desnecessária que pode estar a causar o problema */
-.left-image .info .inner-content {
-  height: auto;
-}
-
-/* Garante que o fundo vermelho está por trás de tudo */
-.left-image .info::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 69, 58, 0.85); /* Vermelho translúcido, ajuste a cor e a opacidade se precisar */
-  z-index: 1; /* Coloca o fundo atrás do conteúdo, mas por cima da imagem */
-}
-
-/* 1. O contentor da imagem torna-se o ponto de referência */
-.left-image {
-  position: relative;
-}
-
-/* 2. O contentor de texto é posicionado por cima da imagem */
-.left-image .info {
-  position: absolute;
-  bottom: 0;       /* Alinha ao fundo do contentor pai */
-  left: 0;
-  width: 100%;     /* Ocupa a largura total */
-  height: 100%;    /* Ocupa a altura total */
-  z-index: 2;      /* Garante que o texto fica por cima da imagem */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Alinha o texto ao fundo */
-  padding: 30px;
-}
-
-/* 3. Criar o fundo vermelho translúcido que fica atrás do texto, mas à frente da imagem */
-.left-image .info::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(236, 74, 93, 0.85); /* Seu vermelho com 85% de opacidade */
-  z-index: 1; /* Posição abaixo do texto (z-index: 2), mas acima da imagem (z-index padrão: 0) */
-  border-radius: 15px; /* Para as bordas arredondadas do fundo */
-}
-/* Posicionamento para o contentor que irá ficar por cima da imagem */
-#blog .left-image .info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 30px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-/* Criar o fundo vermelho translúcido SÓ para esta secção */
-#blog .left-image .info::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(236, 74, 93, 0.85); /* Fundo vermelho translúcido */
-  z-index: 1; /* Por trás do texto, à frente da imagem */
-  border-radius: 15px;
-}
-
-/* Opcional: Garante que o texto dentro deste contentor fica branco */
-#blog .left-image .info * {
-  color: white !important;
-}
-/* REMOVER ESTA REGRA SE ESTIVER A CAUSAR PROBLEMAS NO MENU */
-/* Se a regra ".main-nav .nav li a" do seu template estiver a causar problemas de alinhamento */
-/* ou a anular o nosso CSS, pode ser necessário ajustá-la ou sobrepor. */
-/* Por enquanto, vamos assumir que o CSS acima é suficiente. */
-.right-list ul {
-  display: flex !important;         /* coloca os <li> na horizontal */
-  flex-wrap: wrap!important;        /* deixa quebrar linha se não couber */
-  gap: 20px;              /* espaço entre eles */
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.right-list li {
-  flex: 1 1 calc(33.333% - 20px); /* 3 colunas lado a lado */
-  background: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.left-image {
-  position: relative; /* para o overlay da info */
-}
-
-.left-image .info {
-  position: absolute;   /* overlay sobre a foto */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,255,0.1); /* transparente azul, ajusta a gosto */
-  padding: 10px;
-}
-
-.right-list .card {
-  width: 100%;   /* garante que cada card ocupa a largura da coluna */
-}
-
-/* Garante que a coluna da direita ocupa a altura da coluna da esquerda */
-.row > .col-lg-6 {
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-/* Coluna direita: distribuir os 3 cards verticalmente */
-.right-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* distribui uniformemente os 3 cards */
-  height: 100%; /* ocupa a mesma altura da coluna da esquerda */
-}
-
-.right-list .card img {
-  width: 100%;
-  height: auto;
-  max-height: calc(100% / 3 - 20px); /* cada foto ocupa ~1/3 da altura, ajusta gap */
-  object-fit: cover; /* corta se necessário para preencher */
-}
-.col-lg-6.d-flex.flex-column > .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: calc(100% / 3 - 10px); /* divide altura da coluna pelos 3 cards */
-}
-
-.col-lg-6.d-flex.flex-column > .card img {
-  height: 50%; /* metade do card para a imagem */
-  object-fit: cover;
-}
-
-.our-blog .left-image .info {
-    background: transparent !important;
-    color: #000; /* ajusta a cor do texto se necessário */
-}
-/* Garante que a imagem do Teo mantém a altura dos cards à direita */
-#blog .row > .col-lg-6:first-child .left-image img {
-    height: 100%;       /* ocupa toda a altura do container */
-    object-fit: cover;  /* mantém proporção sem distorcer */
-}
-
-/* O container da esquerda deve ter a mesma altura da direita */
-#blog .row {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 #blog .col-lg-6 {
@@ -848,24 +137,19 @@
     flex-direction: column;
 }
 
-/* Remove qualquer overlay de fundo */
-#blog .left-image .info {
-    background: transparent !important;
-}
-
-/* Correções para a imagem do Teo e o seu contentor de informação */
+/* Estilos para o card do Teo */
 #blog .left-image {
-    position: relative; /* Essencial para posicionar o .info por cima */
-    height: 100%; /* Garante que ocupa a altura total da coluna */
-    overflow: hidden; /* Esconde qualquer parte da imagem ou info que vaze */
-    border-radius: 15px; /* Bordas arredondadas para o bloco */
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
 #blog .left-image img {
-    width: 100%; /* Ocupa a largura total do seu contentor */
-    height: 100%; /* Ocupa a altura total do seu contentor */
-    object-fit: cover; /* Recorta a imagem para preencher sem distorcer, mas pode cortar partes */
-    border-radius: 15px; /* Bordas arredondadas para a imagem */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 #blog .left-image .info {
@@ -873,17 +157,15 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Ocupa a altura total do left-image */
-    padding: 30px; /* Espaçamento interno para o conteúdo */
+    height: 100%;
+    padding: 30px;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinha o conteúdo ao fundo */
-    z-index: 2; /* Fica acima da imagem e do fundo vermelho */
-    box-sizing: border-box; /* Inclui o padding na altura/largura */
-    color: white; /* Cor do texto padrão para este bloco */
+    justify-content: flex-end;
+    box-sizing: border-box;
 }
 
-/* Fundo vermelho translúcido para o bloco de informação da imagem do Teo */
 #blog .left-image .info::before {
     content: '';
     position: absolute;
@@ -891,43 +173,86 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(236, 74, 93, 0.85); /* Seu vermelho com 85% de opacidade */
-    z-index: 1; /* Fica abaixo do conteúdo (.info), mas acima da imagem */
-    border-radius: 15px; /* Bordas arredondadas para o fundo */
+    background-color: rgba(236, 74, 93, 0.85);
+    z-index: 1;
+    border-radius: 15px;
 }
 
-/* Garante que o conteúdo dentro do .info (lista, botão) tem cor branca e z-index */
-#blog .left-image .info ul,
-#blog .left-image .info ul li,
-#blog .left-image .info ul li i,
-#blog .left-image .info .main-blue-button a {
-    color: white !important; /* Força o texto a ser branco */
-    position: relative; /* Necessário para z-index */
-    z-index: 3; /* Fica acima do fundo vermelho */
+#blog .left-image .info *,
+#blog .left-image .info a {
+    color: white !important;
+    position: relative;
+    z-index: 3;
 }
 
-#blog .left-image .info .main-blue-button a {
-    border: 1px solid white !important; /* Borda branca para o botão */
-    background-color: transparent !important;
+/* Estilos para os outros cards */
+#blog .card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: calc(100% / 3 - 10px);
 }
 
-#blog .left-image .info .main-blue-button a:hover {
-    background-color: white !important;
-    color: #ec4a5d !important; /* Texto vermelho no hover */
+/* ==================================== */
+/* --- SEÇÃO DOAÇÕES (PORTFOLIO) --- */
+/* ==================================== */
+
+/* Estilo para os cards de doações */
+.our-portfolio .item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 0;
+    margin-bottom: 30px;
 }
 
-/* Ajustes para o grupo "Setembro 2025 TemplateMo Solidariedade" que está a aparecer no topo */
-/* Este parece ser o .info dentro do HEADER principal, não o da secção #blog */
-/* Vamos anular qualquer estilo que o esteja a tornar vermelho e a puxá-lo para baixo */
-.main-banner .left-content .info { /* ou um seletor mais específico se houver um .info no header */
-    background-color: transparent !important; /* Garante que não tem fundo */
-    position: static !important; /* Restaura o posicionamento normal */
-    height: auto !important; /* Remove altura forçada */
-    padding: 0 !important; /* Remove padding */
-    color: inherit !important; /* Volta à cor normal */
+.our-portfolio .item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
-/* Se por acaso o .info dentro do main-banner tiver um ::before, também o removemos */
-.main-banner .left-content .info::before {
-    display: none !important;
+/* Estilos para o conteúdo "visível" */
+.our-portfolio .item .showed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
 }
+
+/* Estilos para o conteúdo "escondido" (no hover) */
+.our-portfolio .item .hidden-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(236, 74, 93, 0.95);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.our-portfolio .item:hover .hidden-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.our-portfolio
