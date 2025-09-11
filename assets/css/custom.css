@@ -756,8 +756,8 @@
 /* ou a anular o nosso CSS, pode ser necessário ajustá-la ou sobrepor. */
 /* Por enquanto, vamos assumir que o CSS acima é suficiente. */
 .right-list ul {
-  display: flex;          /* coloca os <li> na horizontal */
-  flex-wrap: wrap;        /* deixa quebrar linha se não couber */
+  display: flex !important;         /* coloca os <li> na horizontal */
+  flex-wrap: wrap!important;        /* deixa quebrar linha se não couber */
   gap: 20px;              /* espaço entre eles */
   padding: 0;
   margin: 0;
