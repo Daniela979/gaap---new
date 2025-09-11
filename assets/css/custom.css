@@ -788,3 +788,28 @@
   width: 100%;   /* garante que cada card ocupa a largura da coluna */
 }
 
+/* Garante que a coluna da direita ocupa a altura da coluna da esquerda */
+.row > .col-lg-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-image img {
+  width: 100%;
+  height: auto; /* mantém proporção da foto do Teo */
+}
+
+/* Coluna direita: distribuir os 3 cards verticalmente */
+.right-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* distribui uniformemente os 3 cards */
+  height: 100%; /* ocupa a mesma altura da coluna da esquerda */
+}
+
+.right-list .card img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100% / 3 - 20px); /* cada foto ocupa ~1/3 da altura, ajusta gap */
+  object-fit: cover; /* corta se necessário para preencher */
+}
