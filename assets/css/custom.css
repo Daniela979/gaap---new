@@ -654,7 +654,12 @@
 
 /* Garante que o contentor da imagem serve como ponto de referência */
 .left-image {
-  position: relative;
+  height: 100%; /* ocupa altura da coluna */
+}
+.left-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* Posiciona o contentor do texto sobre a imagem */
@@ -794,10 +799,7 @@
   flex-direction: column;
 }
 
-.left-image img {
-  width: 100%;
-  height: auto; /* mantém proporção da foto do Teo */
-}
+
 
 /* Coluna direita: distribuir os 3 cards verticalmente */
 .right-list {
@@ -812,4 +814,15 @@
   height: auto;
   max-height: calc(100% / 3 - 20px); /* cada foto ocupa ~1/3 da altura, ajusta gap */
   object-fit: cover; /* corta se necessário para preencher */
+}
+.col-lg-6.d-flex.flex-column > .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: calc(100% / 3 - 10px); /* divide altura da coluna pelos 3 cards */
+}
+
+.col-lg-6.d-flex.flex-column > .card img {
+  height: 50%; /* metade do card para a imagem */
+  object-fit: cover;
 }
