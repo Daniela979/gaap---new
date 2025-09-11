@@ -755,31 +755,19 @@
 /* Se a regra ".main-nav .nav li a" do seu template estiver a causar problemas de alinhamento */
 /* ou a anular o nosso CSS, pode ser necessário ajustá-la ou sobrepor. */
 /* Por enquanto, vamos assumir que o CSS acima é suficiente. */
-
 .right-list ul {
-  list-style: none;
+  display: flex;          /* coloca os <li> na horizontal */
+  flex-wrap: wrap;        /* deixa quebrar linha se não couber */
+  gap: 20px;              /* espaço entre eles */
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column; /* mantém os 3 em coluna */
-  gap: 20px; /* espaço entre eles */
+  list-style: none;
 }
 
 .right-list li {
-  display: flex;
-  align-items: flex-start;
-  background: #fff; /* opcional */
+  flex: 1 1 calc(33.333% - 20px); /* 3 colunas lado a lado */
+  background: #fff;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* opcional */
-}
-
-.right-list .left-content {
-  flex: 1;
-  margin-right: 15px;
-}
-
-.right-list .right-image img {
-  max-width: 120px;
-  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
