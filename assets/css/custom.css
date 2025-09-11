@@ -771,26 +771,20 @@
   padding: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+.left-image {
+  position: relative; /* para o overlay da info */
+}
+
 .left-image .info {
-  background: transparent !important;
-  position: absolute; /* se quiseres que fique em overlay */
+  position: absolute;   /* overlay sobre a foto */
   bottom: 0;
   left: 0;
   right: 0;
-}
-.right-list ul {
-  display: flex;
-  flex-direction: column; /* empilha */
-  gap: 20px;              /* espaço entre blocos */
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  background: rgba(0,0,255,0.1); /* transparente azul, ajusta a gosto */
+  padding: 10px;
 }
 
-.right-list li {
-  background: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.right-list .card {
+  width: 100%;   /* garante que cada card ocupa a largura da coluna */
 }
 
