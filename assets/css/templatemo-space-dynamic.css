@@ -853,7 +853,7 @@ Banner Style
 
 .main-banner:before {
   content: '';
-  background-image: url(../images/fundo1.jpg);
+  background-image: url(../images/fundo1.JPG);
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -1576,6 +1576,7 @@ responsive
   }
 
 }
+
 
 
 
