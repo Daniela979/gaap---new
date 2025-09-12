@@ -243,3 +243,8 @@
     color: #ff001c;
     transform: scale(1.1);
 }
+
+  .item:hover {
+        transform: translateY(-5px); /* Efeito de subir */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra mais intensa */
+    }
