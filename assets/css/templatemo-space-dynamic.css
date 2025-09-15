@@ -849,8 +849,6 @@ Banner Style
   top: 100px;
   width: 193px;
   height: 467px;
-  opacity: 0.5; /* Exemplo: 50% de opacidade */
-  z-index: -1;
 }
 
 .main-banner:before {
@@ -862,8 +860,6 @@ Banner Style
   top: 100px;
   width: 98px;
   height: 290px;
-  opacity: 0.5; /* Exemplo: 50% de opacidade */
-  z-index: -1;
 }
 
 .main-banner .left-content {
@@ -1583,6 +1579,7 @@ responsive
   }
 
 }
+
 
 
 
