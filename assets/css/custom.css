@@ -274,3 +274,31 @@
         transform: translateY(-5px); /* Efeito de subir */
         box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra mais intensa */
     }
+
+.about-us .services .item {
+  /* ... outras propriedades ... */
+  background-image: linear-gradient(135deg, #f8f8f8, #e0e0e0);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.about-us .services .item:hover {
+  transform: translateY(-5px); /* Move o item 5px para cima */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); /* Sombra mais forte */
+}
+.about-us .services .item h4 {
+  color: #333; /* Cor mais escura para o nome */
+  font-size: 24px; /* Aumenta o tamanho da fonte */
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.about-us .services .item h4 span {
+  font-size: 20px; /* Mantém o tamanho do ano */
+  font-weight: 400;
+  color: #555; /* Cor mais escura para os anos */
+}
+
+.about-us .services .item p {
+  color: #666; /* Cor mais suave para a descrição */
+  font-size: 15px;
+  line-height: 1.6;
+}
