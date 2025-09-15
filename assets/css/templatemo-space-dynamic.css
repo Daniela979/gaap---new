@@ -957,6 +957,9 @@ About Us Style
   background-position: center center;
   background-size: cover;
   padding: 140px 0px 120px 0px;
+  /* Adicione as duas linhas abaixo */
+  overflow: hidden;
+  display: block;
 }
 
 .about-us .left-image {
@@ -1580,6 +1583,7 @@ responsive
   }
 
 }
+
 
 
 
